@@ -10,12 +10,15 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 不使用ORM框架的数据库读写操作示例。
+ */
 @SpringBootApplication
 public class DemoApplication {
     public static void main(String[] args) throws Exception {
-        String url = "jdbc:mysql://127.0.0.1:3306/yeecode?serverTimezone=UTC";
+        String url = "jdbc:mysql://14.103.70.216:3306/yeecode?serverTimezone=UTC";
         String userName = "root";
-        String password = "yeecode";
+        String password = "password";
 
         User userParam = new User();
         userParam.setSchoolName("Sunny School");
@@ -32,7 +35,7 @@ public class DemoApplication {
 
         // 第四步：处理数据库操作结果
         List<User> userList = new ArrayList<>();
-        while(resultSet.next()){
+        while (resultSet.next()) {
             User user = new User();
             user.setId(resultSet.getInt("id"));
             user.setName(resultSet.getString("name"));

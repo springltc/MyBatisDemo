@@ -10,6 +10,9 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.List;
 
+/**
+ * 最简单的整合的MyBatis的Spring Boot项目示例。
+ */
 @SpringBootApplication
 public class DemoApplication {
     public static void main(String[] args) {
@@ -34,7 +37,7 @@ public class DemoApplication {
             User userParam = new User();
             userParam.setSchoolName("Sunny School");
             // 调用接口展开数据库操作
-            List<User> userList =  userMapper.queryUserBySchoolName(userParam);
+            List<User> userList = userMapper.queryUserBySchoolName(userParam);
             // 打印查询结果
             for (User user : userList) {
                 System.out.println("name : " + user.getName() + " ;  email : " + user.getEmail());

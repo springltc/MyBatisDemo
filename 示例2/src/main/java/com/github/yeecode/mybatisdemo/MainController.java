@@ -13,7 +13,7 @@ public class MainController {
     private UserMapper userMapper;
 
     @RequestMapping("/")
-    public Object index() {
+    public List<User> index() {
         User userParam = new User();
         userParam.setSchoolName("Sunny School");
         List<User> userList = userMapper.queryUserBySchoolName(userParam);
