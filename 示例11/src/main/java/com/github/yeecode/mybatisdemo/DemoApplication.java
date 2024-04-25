@@ -11,6 +11,9 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.List;
 
+/**
+ * 配置文件最为全面的MyBatis查询项目。但由于需要配置项互斥，因此该项目仅用于进行配置项的展示，不可运行。
+ */
 @SpringBootApplication
 public class DemoApplication {
     public static void main(String[] args) {

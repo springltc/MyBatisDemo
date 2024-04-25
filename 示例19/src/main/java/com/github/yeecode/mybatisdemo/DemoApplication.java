@@ -5,6 +5,9 @@ import com.github.yeecode.mybatisdemo.model.User;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cglib.proxy.Enhancer;
 
+/**
+ * 基于cglib的动态代理示例
+ */
 @SpringBootApplication
 public class DemoApplication {
     public static void main(String[] args) throws Exception {

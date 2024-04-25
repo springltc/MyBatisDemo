@@ -10,6 +10,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import java.io.IOException;
 import java.io.InputStream;
 
+/**
+ * 主键自动生成示例。
+ */
 @SpringBootApplication
 public class DemoApplication {
     public static void main(String[] args) {
@@ -23,10 +26,10 @@ public class DemoApplication {
         SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
 
         try (SqlSession session = sqlSessionFactory.openSession()) {
-            User user01 = new User("张大壮","dazhuang@sample.mail",18, 0, "XIERQI SCHOOL");
-            User user02 = new User("王小壮","xiaozhuang@sample.mail",17, 0, "GAOKE SCHOOL");
-            User user03 = new User("王二壮", "wangerzhuang@sample.mail",15,0, "GAOKE SCHOOL");
-            User user04 = new User("李二壮", "lierzhuang@sample.com",21,0, "KEYUAN SCHOOL");
+            User user01 = new User("张大壮", "dazhuang@sample.mail", 18, 0, "XIERQI SCHOOL");
+            User user02 = new User("王小壮", "xiaozhuang@sample.mail", 17, 0, "GAOKE SCHOOL");
+            User user03 = new User("王二壮", "wangerzhuang@sample.mail", 15, 0, "GAOKE SCHOOL");
+            User user04 = new User("李二壮", "lierzhuang@sample.com", 21, 0, "KEYUAN SCHOOL");
 
             int result;
 
@@ -40,12 +43,16 @@ public class DemoApplication {
             System.out.println("insert result : " + result);
             System.out.println("after insert :" + user01.toString());
 
+            System.out.println("------------------------------------------");
+
             // 使用SelectKeyGenerator(AFTER)
             System.out.println("user02:");
             System.out.println("before insert :" + user02.toString());
             result = session.insert("com.github.yeecode.mybatisdemo.dao.UserDao.addUser_B", user02);
             System.out.println("insert result : " + result);
             System.out.println("after insert :" + user02.toString());
+
+            System.out.println("------------------------------------------");
 
             // 使用SelectKeyGenerator(BEFORE)
             // 此种设置用于不支持id自增或未启用id自增的数据库
@@ -56,13 +63,14 @@ public class DemoApplication {
             System.out.println("insert result : " + result);
             System.out.println("after insert :" + user03.toString());
 
+            System.out.println("------------------------------------------");
+
             // 使用NoKeyGenerator，即不使用主键自增功能
             System.out.println("user04:");
             System.out.println("before insert :" + user04.toString());
             result = session.insert("com.github.yeecode.mybatisdemo.dao.UserDao.addUser_D", user04);
             System.out.println("insert result : " + result);
             System.out.println("after insert :" + user04.toString());
-
         }
     }
 }

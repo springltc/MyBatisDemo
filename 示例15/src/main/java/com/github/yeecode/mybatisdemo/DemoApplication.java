@@ -8,6 +8,9 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * OGNL演示示例。
+ */
 @SpringBootApplication
 public class DemoApplication {
     public static void main(String[] args) {
@@ -65,7 +68,7 @@ public class DemoApplication {
         Integer hashCode = (Integer) Ognl.getValue("hashCode()", "yeecode");
         System.out.println("对字符串对象调用hashCode方法得到：" + hashCode);
         // 调用类方法
-        Double result = (Double)Ognl.getValue("@java.lang.Math@random()", null);
+        Double result = (Double) Ognl.getValue("@java.lang.Math@random()", null);
         System.out.println("调用Math类中的静态方法random，得到：" + result);
     }
 

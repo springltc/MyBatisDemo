@@ -10,6 +10,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * 责任链模式示例。
+ */
 @SpringBootApplication
 public class DemoApplication {
     public static void main(String[] args) {
@@ -20,20 +23,16 @@ public class DemoApplication {
 
         List<Performer> performerList = Arrays.asList(new Performer[]{performer01, performer02, performer03, performer04});
 
-        // 不使用责任链模式
-        System.out.println("不使用责任链模式：");
-        // 创建三个工作人员实例
-        MailSender mailSender = new MailSender();
-        MaterialManager materialManager = new MaterialManager();
-        ContactOfficer contactOfficer = new ContactOfficer();
-        // 依次处理每个参与者
-        for (Performer performer : performerList) {
-            System.out.println("process " + performer.getName() + ":");
-            new MailSender().handle(performer);
-            new MaterialManager().handle(performer);
-            new ContactOfficer().handle(performer);
-            System.out.println("---------");
-        }
+//        // 不使用责任链模式
+//        System.out.println("不使用责任链模式：");
+//        // 依次处理每个参与者
+//        for (Performer performer : performerList) {
+//            System.out.println("process " + performer.getName() + ":");
+//            new MailSender().handle(performer);
+//            new MaterialManager().handle(performer);
+//            new ContactOfficer().handle(performer);
+//            System.out.println("---------");
+//        }
 
         // 使用责任链模式
         System.out.println("使用责任链模式：");
@@ -47,7 +46,6 @@ public class DemoApplication {
             handlerChain.triggerProcess(performer);
             System.out.println("---------");
         }
-
     }
 }
 

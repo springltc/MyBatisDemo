@@ -10,8 +10,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.List;
-import java.util.Map;
 
+/**
+ * 多结果集的返回与处理示例。
+ */
 @SpringBootApplication
 public class DemoApplication {
     public static void main(String[] args) {
@@ -30,9 +32,9 @@ public class DemoApplication {
             List<List<Object>> result = session.selectList("com.github.yeecode.mybatisdemo.dao.Dao01.query");
             System.out.println("结果集包含结果数目:" + result.size());
             int i = 1;
-            for (List<Object> list: result ) {
+            for (List<Object> list : result) {
                 System.out.println("结果集" + i++ + ":");
-                for (Object o: list) {
+                for (Object o : list) {
                     System.out.println(o.toString());
                 }
             }
@@ -43,7 +45,7 @@ public class DemoApplication {
         try (SqlSession session = sqlSessionFactory.openSession()) {
             List<User> result = session.selectList("com.github.yeecode.mybatisdemo.dao.Dao02.query");
             System.out.println("结果包含记录数目: " + result.size());
-            for (User user: result) {
+            for (User user : result) {
                 System.out.println(user);
             }
         }

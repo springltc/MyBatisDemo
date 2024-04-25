@@ -9,17 +9,20 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * Guava使用示例。
+ */
 @SpringBootApplication
 public class DemoApplication {
     public static void main(String[] args) {
-        String[] record = {"易哥:4","杰克:5","易哥:1","杰克:7","张大壮:3"};
+        String[] record = {"易哥:4", "杰克:5", "易哥:1", "杰克:7", "张大壮:3"};
 
         System.out.println("使用原生Map:");
         Map<String, List<Integer>> taskMap = new HashMap<>();
         for (String item : record) {
             String key = item.split(":")[0];
             Integer value = Integer.parseInt(item.split(":")[1]);
-            taskMap.putIfAbsent(key,new ArrayList<>());
+            taskMap.putIfAbsent(key, new ArrayList<>());
             taskMap.get(key).add(value);
         }
         System.out.println(taskMap);
@@ -29,7 +32,7 @@ public class DemoApplication {
         for (String item : record) {
             String key = item.split(":")[0];
             Integer value = Integer.parseInt(item.split(":")[1]);
-            multimap.put(key,value);
+            multimap.put(key, value);
         }
         System.out.println(multimap.asMap());
 

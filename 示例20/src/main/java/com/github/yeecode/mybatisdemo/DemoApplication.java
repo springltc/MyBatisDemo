@@ -9,6 +9,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.lang.reflect.Method;
 
+/**
+ * javassist的使用示例。
+ * Javassist是一个用于在Java字节码级别上编辑、创建和操作Java类的库。它提供了一种简单而强大的方式来动态修改 Java 程序的运行时行为，
+ * 比如动态生成类、添加字段、修改方法等。Javassist可以用于实现各种功能，比如AOP、动态代理、动态配置等。
+ */
 @SpringBootApplication
 public class DemoApplication {
     public static void main(String[] args) throws Exception {
@@ -30,13 +35,13 @@ public class DemoApplication {
         Object user = userClazz.newInstance();
         // 为对象设置name值
         Method[] methods = userClazz.getMethods();
-        for (Method method: methods){
+        for (Method method : methods) {
             if (method.getName().equals("setName")) {
-                method.invoke(user,"易哥");
+                method.invoke(user, "易哥");
             }
         }
         // 调用对象sayHello方法
-        for (Method method: methods){
+        for (Method method : methods) {
             if (method.getName().equals("sayHello")) {
                 String result = (String) method.invoke(user);
                 System.out.println(result);

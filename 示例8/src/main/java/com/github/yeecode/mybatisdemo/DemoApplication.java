@@ -4,6 +4,9 @@ import com.github.yeecode.mybatisdemo.model.UserProxy;
 import com.github.yeecode.mybatisdemo.model.User;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+/**
+ * 静态代理示例。
+ */
 @SpringBootApplication
 public class DemoApplication {
     public static void main(String[] args) throws Exception {

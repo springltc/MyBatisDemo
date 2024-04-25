@@ -3,6 +3,9 @@ package com.github.yeecode.mybatisdemo;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+/**
+ * 基于注解的MyBatis项目示例。
+ */
 @SpringBootApplication
 public class DemoApplication {
     public static void main(String[] args) {

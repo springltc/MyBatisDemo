@@ -9,6 +9,9 @@ import javax.xml.xpath.XPath;
 import javax.xml.xpath.XPathExpression;
 import javax.xml.xpath.XPathFactory;
 
+/**
+ * 使用XPath解析XML文档的示例。
+ */
 @SpringBootApplication
 public class DemoApplication {
     public static void main(String[] args) {

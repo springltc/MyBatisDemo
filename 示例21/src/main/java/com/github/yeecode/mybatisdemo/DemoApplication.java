@@ -12,6 +12,11 @@ import java.io.FileOutputStream;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 
+/**
+ * 序列化与反序列化示例，
+ * 包括writeExternal方法和readExternal方法示例、
+ * writeReplace方法和readResolve方法示例。
+ */
 @SpringBootApplication
 public class DemoApplication {
     public static void main(String[] args) {

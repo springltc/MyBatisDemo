@@ -5,6 +5,9 @@ import com.github.yeecode.mybatisdemo.model.Cleaning;
 import com.github.yeecode.mybatisdemo.model.WipeBlackboard;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+/**
+ * 模板模式Demo。
+ */
 @SpringBootApplication
 public class DemoApplication {
     public static void main(String[] args) {

@@ -11,6 +11,10 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.List;
 
+/**
+ * MyBaits插件开发示例。
+ * 拦截器
+ */
 @SpringBootApplication
 public class DemoApplication {
     public static void main(String[] args) {

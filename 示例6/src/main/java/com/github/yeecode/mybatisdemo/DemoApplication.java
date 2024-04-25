@@ -5,6 +5,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.lang.reflect.Type;
 
+/**
+ * TypeParameterResolver类的功能示例。
+ */
 @SpringBootApplication
 public class DemoApplication {
     public static void main(String[] args) {

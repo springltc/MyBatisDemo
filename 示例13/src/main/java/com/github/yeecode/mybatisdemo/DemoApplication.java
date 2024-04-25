@@ -11,6 +11,12 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.List;
 
+/**
+ * 一个较为全面的MyBaits配置文件、映射文件示例。其中包含了：
+ * resultMap标签的继承示例、数据库操作节点中的include节点示例、
+ * resultMap节点中的discriminator节点示例、
+ * resultMap节点中的各类ResultMappings节点示例。
+ */
 @SpringBootApplication
 public class DemoApplication {
     public static void main(String[] args) {

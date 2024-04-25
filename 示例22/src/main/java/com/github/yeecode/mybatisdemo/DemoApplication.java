@@ -2,6 +2,9 @@ package com.github.yeecode.mybatisdemo;
 
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+/**
+ * ThreadLocal示例。
+ */
 @SpringBootApplication
 public class DemoApplication {
     // 创建了两个ThreadLocal变量

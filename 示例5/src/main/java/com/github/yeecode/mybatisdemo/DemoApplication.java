@@ -6,6 +6,9 @@ import java.lang.reflect.Field;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * 反射功能示例。
+ */
 @SpringBootApplication
 public class DemoApplication {
     public static void main(String[] args) {

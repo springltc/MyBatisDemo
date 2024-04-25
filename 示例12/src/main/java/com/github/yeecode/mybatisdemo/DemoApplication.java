@@ -1,11 +1,13 @@
 package com.github.yeecode.mybatisdemo;
 
-import com.github.yeecode.mybatisdemo.builder.GardenSchoolUserBuilder;
 import com.github.yeecode.mybatisdemo.builder.SunnySchoolUserBuilder;
 import com.github.yeecode.mybatisdemo.builder.UserBuilder;
 import com.github.yeecode.mybatisdemo.model.User;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+/**
+ * 建造者模式示例。
+ */
 @SpringBootApplication
 public class DemoApplication {
     public static void main(String[] args) {

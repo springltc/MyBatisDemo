@@ -11,6 +11,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import java.io.IOException;
 import java.io.InputStream;
 
+/**
+ * 游标使用示例。
+ */
 @SpringBootApplication
 public class DemoApplication {
     public static void main(String[] args) {

@@ -17,7 +17,7 @@
     <!--CREATE PROCEDURE `yeecode`(IN `ageMinLimit` int,IN `ageMaxLimit` int,OUT `count` int, OUT `maxAge` int)-->
     <!--BEGIN-->
     <!--SELECT COUNT(*),MAX(age) INTO count,maxAge FROM user WHERE age >= ageMinLimit AND age <= ageMaxLimit;-->
-    <!--END $$-->
+    <!--END -->
     <select id="runCall" statementType="CALLABLE">
       CALL yeecode(
       ${ageMinLimit},

@@ -15,6 +15,9 @@ import java.sql.Connection;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * MyBaits使用SqlRunner直接执行SQL语句示例，使用ScriptRunner直接执行SQL脚本示例。
+ */
 @SpringBootApplication
 public class DemoApplication {
     public static void main(String[] args) throws Exception {
@@ -33,12 +36,12 @@ public class DemoApplication {
         // SqlRunner类的使用
         String sql = "SELECT * FROM user WHERE age = ?;";
         SqlRunner sqlRunner = new SqlRunner(connection);
-        List<Map<String, Object>> result = sqlRunner.selectAll(sql,15);
+        List<Map<String, Object>> result = sqlRunner.selectAll(sql, 15);
         System.out.println(result);
 
         // SqlRunner类的使用，email变量值为null
         sql = "UPDATE user SET email = ?  WHERE id = 2;";
-        Integer out = sqlRunner.update(sql,Null.STRING);
+        Integer out = sqlRunner.update(sql, Null.STRING);
         System.out.println(out);
 
         // ScriptRunner类的使用

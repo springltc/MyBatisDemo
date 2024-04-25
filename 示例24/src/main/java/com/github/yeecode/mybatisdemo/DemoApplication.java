@@ -16,6 +16,21 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.List;
 
+/**
+ * 懒加载示例。
+ *  <resultMap id="associationUserMap" type="User">
+ *         <result property="id" column="id"/>
+ *         <result property="name" column="name"/>
+ *         <result property="email" column="email"/>
+ *         <result property="age" column="age"/>
+ *         <result property="sex" column="sex"/>
+ *         <result property="schoolName" column="schoolName"/>
+ *         <association property="taskList" javaType="ArrayList"
+ *
+ *                      select="com.github.yeecode.mybatisdemo.dao.UserDao.selectTask" column="id"/>
+ *
+ *     </resultMap>
+ */
 @SpringBootApplication
 public class DemoApplication {
     public static void main(String[] args) {

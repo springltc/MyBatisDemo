@@ -2,6 +2,9 @@ package com.github.yeecode.mybatisdemo;
 
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+/**
+ * 装饰器模式示例。
+ */
 @SpringBootApplication
 public class DemoApplication {
     public static void main(String[] args) {
@@ -9,12 +12,13 @@ public class DemoApplication {
         Phone phone = new TelePhone();
         phone.callOut("Hello, this is yee.");
 
-        System.out.println();
+        System.out.println("============================================");
 
         System.out.println("--经过装饰后的Phone有录音功能--");
         Phone phoneWithRecorder = new PhoneRecordDecorator(phone);
         phoneWithRecorder.callOut("Hello, this is yee.");
 
+        System.out.println("============================================");
 
         // 有短信功能的Phone
         Phone phoneWithMessage = new PhoneMessageDecorator(phone);
